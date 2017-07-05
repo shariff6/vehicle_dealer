@@ -20,7 +20,8 @@ post('/vehicles') do
   make = params.fetch('make')
   model = params.fetch('model')
   year = params.fetch('year')
-  vehicle = Vehicle.new(make, model, year)
+  image = params.fetch('image')
+  vehicle = Vehicle.new(make, model, year, image)
   vehicle.save
   erb(:success)
 end
