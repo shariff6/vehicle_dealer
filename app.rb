@@ -49,5 +49,5 @@ require('sinatra')
       @vehicle.save()
       @dealership = Dealership.find(params.fetch('dealership_id').to_i())
       @dealership.add_vehicle(@vehicle)
-      erb(:success)
+      erb(:dealership)
     end
